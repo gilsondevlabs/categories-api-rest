@@ -7,5 +7,5 @@ from categories.core.models import Category
 
 
 class CategoryView(generics.ListCreateAPIView):
-    queryset = Category.objects.all()
+    queryset = Category.objects.root_nodes()
     serializer_class = CategorySerializer
