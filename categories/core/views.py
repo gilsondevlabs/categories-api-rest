@@ -9,3 +9,8 @@ from categories.core.models import Category
 class CategoryView(generics.ListCreateAPIView):
     queryset = Category.objects.root_nodes()
     serializer_class = CategorySerializer
+
+
+class CategoryDetailView(generics.RetrieveUpdateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
